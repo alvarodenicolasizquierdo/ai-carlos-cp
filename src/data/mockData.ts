@@ -33,11 +33,11 @@ export const demoUsers: User[] = [
   {
     id: 'user-3',
     name: 'Dr. Amm Martinez',
-    email: 'e.martinez@sgs.com',
+    email: 'e.martinez@tht.com',
     role: 'lab_technician',
     avatar: 'AM',
     avatarUrl: ammAvatar,
-    company: 'SGS',
+    company: 'THT',
     department: 'Chemical Testing'
   },
   {
@@ -53,11 +53,11 @@ export const demoUsers: User[] = [
   {
     id: 'user-5',
     name: 'Hajra Khan',
-    email: 'hajra@sgs.com',
+    email: 'hajra@tht.com',
     role: 'admin',
     avatar: 'HK',
     avatarUrl: hajraAvatar,
-    company: 'SGS',
+    company: 'THT',
     department: 'Platform Admin'
   }
 ];
@@ -84,7 +84,7 @@ const trfTimeline: TRFTimelineEvent[] = [
     id: 'event-003',
     type: 'sample_received',
     title: 'Sample Received',
-    description: '3 fabric swatches received at SGS Hong Kong lab',
+    description: '3 fabric swatches received at THT Hong Kong lab',
     actor: 'Lab Reception',
     timestamp: '2026-01-18T10:15:00Z'
   },

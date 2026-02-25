@@ -21,7 +21,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useUser, getRoleDisplayName } from '@/contexts/UserContext';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import sgsLogo from '@/assets/sgs-logo.png';
+import thtLogo from '@/assets/tht-logo.png';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -70,8 +70,8 @@ export function Sidebar() {
       <div className="h-16 flex items-center px-4 border-b border-sidebar-border">
         <Link to="/" className="flex items-center gap-3">
           <img 
-            src={sgsLogo} 
-            alt="SGS Logo" 
+            src={thtLogo} 
+            alt="THT Logo"
             width={65}
             height={32}
             className="h-8 w-auto shrink-0"

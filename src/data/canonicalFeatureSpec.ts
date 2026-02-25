@@ -9,7 +9,7 @@ export const canonicalFeatureSpec = {
     meta: {
       app_name: "CARLOS",
       full_name: "Compliance & Assurance Retail Lifecycle Operating System",
-      vendor: "SGS SA",
+      vendor: "THT",
       platform: "Lovable (AI-accelerated development)",
       tech_stack: [
         "React 18.3", "TypeScript", "Tailwind CSS", "Vite", "React Router 6",
@@ -43,7 +43,7 @@ export const canonicalFeatureSpec = {
     },
 
     platform_architecture: {
-      deployment: "Lovable Cloud hosting (Vite SPA). Published at sgs-ai-carlos.lovable.app",
+      deployment: "Lovable Cloud hosting (Vite SPA). Published at tht-ai-carlos.lovable.app",
       frontend_framework: "React 18.3 with TypeScript, Vite bundler, Tailwind CSS + shadcn/ui component library",
       state_management: "React Context API — no Zustand stores. Key contexts: UserContext (role switching, demo users), DraftsContext (draft management). Custom hooks: useAIContext (AI computation), useWidgetConfig (dashboard widget configuration with localStorage persistence), useInspectionDragDrop, useSwipeGesture.",
       routing: {
@@ -502,7 +502,7 @@ export const canonicalFeatureSpec = {
         custom_workflows: "not_implemented",
         template_management: "not_implemented",
         notification_rules: "not_implemented",
-        branding_customization: "SGS branding applied via CSS variables and logo"
+        branding_customization: "THT branding applied via CSS variables and logo"
       },
       audit_trail: "TRF timeline events, GSW audit trail, supplier certification tracking. No global audit log.",
       data_export: "Documentation module exports JSON and Markdown. Analytics export planned."
@@ -513,7 +513,7 @@ export const canonicalFeatureSpec = {
       notifications: { type: "in-app", description: "Notification badges on sidebar nav items. Toast notifications via Sonner. No email or push." },
       file_management: { upload: "CSV import for products, document upload on TRFs, GSW file upload", preview: "Document list with type badges", supported_formats: ["CSV", "PDF", "JPEG/PNG (sample photos)", "ZIP"] },
       i18n: { multi_language: "no", languages: ["English"] },
-      theming: { dark_mode: "yes (via next-themes)", custom_themes: "no", sgs_branding: "SGS logo, CARLOS AI branding, custom color palette with ai-primary/ai-secondary gradient, sidebar theme" }
+      theming: { dark_mode: "yes (via next-themes)", custom_themes: "no", tht_branding: "THT logo, CARLOS AI branding, custom color palette with ai-primary/ai-secondary gradient, sidebar theme" }
     },
 
     ui_component_inventory: {
@@ -642,7 +642,7 @@ export const canonicalFeatureSpec = {
           "Modern UX with role-adaptive AI vs SMART's form-based interface",
           "Scenario simulation for compliance planning"
         ],
-        smart_migration_relevance: "CARLOS complements SMART by providing the client-facing layer that SMART lacks. While SMART handles internal lab operations and LIMS, CARLOS serves as the customer portal where buyers, suppliers, and managers interact with SGS services. The two systems can coexist: SMART for internal ops, CARLOS for external engagement."
+        smart_migration_relevance: "CARLOS complements SMART by providing the client-facing layer that SMART lacks. While SMART handles internal lab operations and LIMS, CARLOS serves as the customer portal where buyers, suppliers, and managers interact with THT services. The two systems can coexist: SMART for internal ops, CARLOS for external engagement."
       }
     },
 

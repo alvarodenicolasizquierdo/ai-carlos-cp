@@ -261,7 +261,7 @@ export const helpKnowledgeBase: HelpKnowledgeBase = {
         "Escalate as a configuration/template update request (not user error)."
       ],
       still_not_working_escalate_when: [
-        "Always escalate if the issue is missing columns in export (requires SGS change)."
+        "Always escalate if the issue is missing columns in export (requires THT change)."
       ],
       escalation_payload_fields: [
         "report_name", "export_type", "missing_fields_list", "example_style_code", "screenshot"
@@ -320,7 +320,7 @@ export const helpKnowledgeBase: HelpKnowledgeBase = {
       ],
       fix_steps: [
         "Confirm the user role that should have access.",
-        "Request SGS to assign the correct permission group/role."
+        "Request THT to assign the correct permission group/role."
       ],
       still_not_working_escalate_when: [
         "Always escalate if tabs are missing (permissions/configuration)."

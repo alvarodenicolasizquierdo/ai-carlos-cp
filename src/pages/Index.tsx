@@ -1,4 +1,4 @@
-import sgsLogo from '@/assets/sgs-logo.png';
+import thtLogo from '@/assets/tht-logo.png';
 
 const Index = () => {
   return (
@@ -7,8 +7,8 @@ const Index = () => {
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-3">
             <img 
-              src={sgsLogo} 
-              alt="SGS Logo" 
+              src={thtLogo} 
+              alt="THT Logo" 
               width={65}
               height={32}
               className="h-8 w-auto"
@@ -20,7 +20,7 @@ const Index = () => {
       <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center">
         <div className="text-center">
           <h1 className="mb-4 text-4xl font-bold text-foreground">Welcome to CARLOS</h1>
-          <p className="text-xl text-muted-foreground">AI-Powered TIC Platform by SGS</p>
+          <p className="text-xl text-muted-foreground">AI-Powered TIC Platform by THT</p>
         </div>
       </main>
     </div>

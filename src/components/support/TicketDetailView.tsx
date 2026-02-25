@@ -44,7 +44,7 @@ const getSubmissionDetails = (ticket: Ticket) => ({
   email: `${ticket.createdBy.toLowerCase().replace(/\s+/g, '.')}@company.com`,
   name: ticket.createdBy,
   role: 'Quality Manager',
-  company: 'SGS',
+  company: 'THT',
   topic: ticket.category,
   description: ticket.description,
 });
