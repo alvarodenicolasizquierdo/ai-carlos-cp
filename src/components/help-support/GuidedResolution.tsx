@@ -231,7 +231,7 @@ export function GuidedResolution({ data, onStepComplete }: GuidedResolutionProps
                       Still not working?
                     </h3>
                     <p className="text-xs text-muted-foreground">
-                      Get help from the SGS support team
+                      Get help from the THT support team
                     </p>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ export function GuidedResolution({ data, onStepComplete }: GuidedResolutionProps
                   onClick={() => setShowEscalation(true)}
                   className="shrink-0"
                 >
-                  Escalate to SGS
+                  Escalate to THT
                 </Button>
               </div>
             </CardContent>

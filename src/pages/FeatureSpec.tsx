@@ -17,7 +17,7 @@ export default function FeatureSpec() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'sgs-ai-carlos_canonical_feature_spec.json';
+    a.download = 'tht-ai-carlos_canonical_feature_spec.json';
     a.click();
     URL.revokeObjectURL(url);
     setTimeout(() => setDownloading(null), 1000);
@@ -30,7 +30,7 @@ export default function FeatureSpec() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'sgs-ai-carlos_canonical_feature_spec.md';
+    a.download = 'tht-ai-carlos_canonical_feature_spec.md';
     a.click();
     URL.revokeObjectURL(url);
     setTimeout(() => setDownloading(null), 1000);

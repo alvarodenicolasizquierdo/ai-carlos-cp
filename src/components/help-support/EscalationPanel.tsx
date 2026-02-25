@@ -76,7 +76,7 @@ export function EscalationPanel({
 
       console.log('Escalation ticket:', ticket);
 
-      toast.success('Ticket submitted to SGS Support', {
+      toast.success('Ticket submitted to THT Support', {
         description: 'Reference: ESC-' + Math.random().toString(36).substr(2, 8).toUpperCase(),
       });
 
@@ -95,7 +95,7 @@ export function EscalationPanel({
         <SheetHeader className="p-6 pb-4 border-b border-border bg-destructive/5">
           <SheetTitle className="flex items-center gap-2 text-lg">
             <AlertCircle className="w-5 h-5 text-destructive" />
-            Escalate to SGS Support
+            Escalate to THT Support
           </SheetTitle>
           <p className="text-sm text-muted-foreground">
             We'll route this to the right specialist

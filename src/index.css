@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CARLOS Design System - SGS TIC Customer Portal
+/* CARLOS Design System - THT TIC Customer Portal
    A premium, enterprise-grade command center aesthetic
    Inspired by Linear, Figma, and Stripe's polish */
 
@@ -20,7 +20,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* SGS-inspired deep blue primary */
+    /* THT-inspired deep blue primary */
     --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 

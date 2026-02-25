@@ -58,7 +58,7 @@ const certifications: Record<string, SupplierCertification[]> = {
     { id: 'cert-3', name: 'BSCI', issuer: 'amfori', issuedDate: '2025-01-10', expiryDate: '2026-01-10', status: 'expiring_soon' },
   ],
   dragon_fabrics: [
-    { id: 'cert-4', name: 'ISO 9001:2015', issuer: 'SGS', issuedDate: '2024-08-20', expiryDate: '2027-08-20', status: 'valid' },
+    { id: 'cert-4', name: 'ISO 9001:2015', issuer: 'THT', issuedDate: '2024-08-20', expiryDate: '2027-08-20', status: 'valid' },
     { id: 'cert-5', name: 'GOTS', issuer: 'Control Union', issuedDate: '2025-02-01', expiryDate: '2026-02-01', status: 'expiring_soon' },
   ],
   anatolian: [

@@ -29,9 +29,9 @@ const DEPARTMENT_TESTS: Record<string, string[]> = {
 
 // Lab recommendations based on test type
 const LAB_RECOMMENDATIONS = {
-  chemical: ['SGS Ningbo', 'SGS Shanghai', 'Intertek Shenzhen'],
-  physical: ['SGS Hong Kong', 'SGS Dongguan', 'Bureau Veritas Guangzhou'],
-  performance: ['SGS Performance Lab', 'Intertek Sports Lab']
+  chemical: ['THT Ningbo', 'THT Shanghai', 'Intertek Shenzhen'],
+  physical: ['THT Hong Kong', 'THT Dongguan', 'Bureau Veritas Guangzhou'],
+  performance: ['THT Performance Lab', 'Intertek Sports Lab']
 };
 
 export interface TestPlanSuggestion {
@@ -214,7 +214,7 @@ export function generateTestPlanSuggestions(
 
   const labs: LabRecommendation[] = [
     {
-      labName: hasChemicalTests ? 'SGS Shanghai Chemical Lab' : 'SGS Hong Kong Physical Lab',
+      labName: hasChemicalTests ? 'THT Shanghai Chemical Lab' : 'THT Hong Kong Physical Lab',
       matchScore: 95,
       capabilities: hasChemicalTests 
         ? ['Colorfastness', 'Chemical Analysis', 'RSL Testing']
@@ -222,7 +222,7 @@ export function generateTestPlanSuggestions(
       turnaround: '5-7 days'
     },
     {
-      labName: 'SGS Dongguan Integrated Lab',
+      labName: 'THT Dongguan Integrated Lab',
       matchScore: 88,
       capabilities: ['Physical & Chemical', 'Performance Testing'],
       turnaround: '7-10 days'
