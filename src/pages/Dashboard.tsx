@@ -25,6 +25,7 @@ import { AIDisclaimerBanner } from '@/components/compliance/AIDisclaimerBanner';
 import { DPPEvidenceChecklist } from '@/components/compliance/DPPEvidenceChecklist';
 import { LastUpdatedTimestamp } from '@/components/compliance/LastUpdatedTimestamp';
 import { InternalOnly } from '@/components/demo/InternalOnly';
+import { RoleRightColumn } from '@/components/dashboard/RoleRightColumn';
 
 // Lazy-load WidgetCatalog to defer dnd-kit + framer-motion from the critical bundle
 const WidgetCatalog = lazy(() => import('@/components/dashboard/WidgetCatalog').then(m => ({ default: m.WidgetCatalog })));
@@ -112,6 +113,9 @@ export default function Dashboard() {
 
   // For supplier role, show supplier-specific dashboard
   const isSupplier = currentUser.role === 'supplier';
+  
+  // Regulatory alerts only relevant for buyer, manager, admin
+  const showRegulatoryAlerts = currentUser.role !== 'supplier' && currentUser.role !== 'lab_technician';
 
   // Render a widget by ID
   const renderWidget = (widgetId: string) => {
@@ -201,7 +205,7 @@ export default function Dashboard() {
       </div>
 
       {/* Regulatory Alerts - Sticky at top if enabled */}
-      {isWidgetEnabled('regulatory_alerts') && (
+      {showRegulatoryAlerts && isWidgetEnabled('regulatory_alerts') && (
         <div className="mb-6 animate-fade-in">
           <RegulatoryAlerts />
         </div>
@@ -323,27 +327,9 @@ export default function Dashboard() {
           )}
         </div>
 
-        {/* Right Column - Readiness & Context */}
+        {/* Right Column - Role-adaptive content */}
         <div className="space-y-4 md:space-y-6">
-          {/* FIX 4: DPP Evidence Checklist replaces ReadinessGauge percentage */}
-          <Card data-tour="readiness-gauge">
-            <CardHeader className="pb-3">
-              <div className="flex items-center gap-2">
-                <Target className="w-5 h-5 text-muted-foreground" />
-                <CardTitle className="text-lg">
-                  {isSupplier ? 'Your Compliance Status' : 'DPP Evidence Status'}
-                </CardTitle>
-              </div>
-              <p className="text-xs text-muted-foreground">
-                {isSupplier 
-                  ? 'Your current compliance evidence and gaps'
-                  : 'Verified evidence checklist — no AI estimation'}
-              </p>
-            </CardHeader>
-            <CardContent>
-              <DPPEvidenceChecklist />
-            </CardContent>
-          </Card>
+          <RoleRightColumn />
 
           {/* Context Object Display — internal only, hidden in demo mode */}
           <InternalOnly>

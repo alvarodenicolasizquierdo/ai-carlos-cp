@@ -1,6 +1,8 @@
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { LastUpdatedTimestamp } from '@/components/compliance/LastUpdatedTimestamp';
+import { useUser } from '@/contexts/UserContext';
+import { UserRole } from '@/types';
 
 interface KPI {
   label: string;
@@ -9,14 +11,43 @@ interface KPI {
   changeLabel: string;
 }
 
-const kpis: KPI[] = [
-  { label: 'TRFs In Progress', value: '24', change: 8, changeLabel: 'vs last week' },
-  { label: 'Avg Turnaround', value: '4.2d', change: -12, changeLabel: 'improved' },
-  { label: 'Pass Rate', value: '94%', change: 2, changeLabel: 'vs last month' },
-  { label: 'Pending Approvals', value: '7', change: 0, changeLabel: 'no change' },
-];
+const kpisByRole: Record<UserRole, KPI[]> = {
+  buyer: [
+    { label: 'TRFs In Progress', value: '24', change: 8, changeLabel: 'vs last week' },
+    { label: 'Avg Turnaround', value: '4.2d', change: -12, changeLabel: 'improved' },
+    { label: 'Pass Rate', value: '94%', change: 2, changeLabel: 'vs last month' },
+    { label: 'Pending Approvals', value: '7', change: 0, changeLabel: 'no change' },
+  ],
+  supplier: [
+    { label: 'Open Requests', value: '5', change: -1, changeLabel: 'vs last week' },
+    { label: 'Documents Due', value: '3', change: 2, changeLabel: 'new this week' },
+    { label: 'Compliance Score', value: '88%', change: 3, changeLabel: 'improved' },
+    { label: 'Avg Response Time', value: '1.8d', change: -15, changeLabel: 'faster' },
+  ],
+  lab_technician: [
+    { label: 'Samples in Queue', value: '18', change: 12, changeLabel: 'vs yesterday' },
+    { label: 'Tests Completed Today', value: '7', change: 40, changeLabel: 'vs avg' },
+    { label: 'Avg Test Duration', value: '3.1h', change: -8, changeLabel: 'improved' },
+    { label: 'Critical Priority', value: '4', change: 1, changeLabel: 'new today' },
+  ],
+  manager: [
+    { label: 'Overall Compliance', value: '91%', change: 2, changeLabel: 'vs last quarter' },
+    { label: 'Active Suppliers', value: '12', change: 0, changeLabel: 'no change' },
+    { label: 'Revenue at Risk', value: '$48K', change: -25, changeLabel: 'reduced' },
+    { label: 'On-Time Delivery', value: '96%', change: 4, changeLabel: 'improved' },
+  ],
+  admin: [
+    { label: 'Active Users', value: '47', change: 5, changeLabel: 'vs last month' },
+    { label: 'System Uptime', value: '99.9%', change: 0, changeLabel: 'stable' },
+    { label: 'Pending Invites', value: '3', change: -2, changeLabel: 'vs last week' },
+    { label: 'API Calls (24h)', value: '12.4K', change: 18, changeLabel: 'vs avg' },
+  ],
+};
 
 export function KPISummaryWidget() {
+  const { currentUser } = useUser();
+  const kpis = kpisByRole[currentUser.role] || kpisByRole.buyer;
+
   return (
     <div className="space-y-1">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
